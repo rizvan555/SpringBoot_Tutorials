@@ -19,6 +19,7 @@
       <property name="pet" ref="myPet"></property>
         <property name="surname" value="${person.surname}"></property>
         <property name="age" value="${person.age}"></property>
+        <property name="car" value="${person.car}"></property>
     </bean>
 
 </beans>

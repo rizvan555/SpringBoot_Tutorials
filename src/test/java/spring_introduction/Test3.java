@@ -15,6 +15,7 @@ public class Test3 {
 
         System.out.println("Surname: " + person.getSurname());
         System.out.println("Age: " + person.getAge());
+        System.out.println("Car: " + person.getCar());
 
 
     context.close();
