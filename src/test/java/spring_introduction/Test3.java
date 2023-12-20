@@ -16,6 +16,7 @@ public class Test3 {
         System.out.println("Surname: " + person.getSurname());
         System.out.println("Age: " + person.getAge());
 
+
     context.close();
     }
 }
