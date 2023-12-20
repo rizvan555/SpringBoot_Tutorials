@@ -7,16 +7,18 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+
+    <context:property-placeholder location="classpath:application.properties"/>
+
     <bean id="myPet" class="spring_introduction.Dog"></bean>
     <bean id="myPet2" class="spring_introduction.Cat"></bean>
     <bean id="myPet3" class="spring_introduction.Cow"></bean>
 
-<<<<<<< HEAD
-=======
+
     <bean id="myPerson" class = "spring_introduction.Person">
-        <constructor-arg ref="myPet2"/>
+      <property name="pet" ref="myPet"></property>
+        <property name="surname" value="${person.surname}"></property>
+        <property name="age" value="${person.age}"></property>
     </bean>
 
-
->>>>>>> 5a7349a (Dependency Injection with  Constructor)
 </beans>
