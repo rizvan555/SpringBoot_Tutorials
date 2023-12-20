@@ -9,7 +9,6 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com</groupId>
-<<<<<<< HEAD
     <artifactId>rizvankarimov</artifactId>
 =======
     <artifactId>spring_course</artifactId>

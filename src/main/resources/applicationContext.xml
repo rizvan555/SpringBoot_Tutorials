@@ -11,12 +11,11 @@
     <bean id="myPet2" class="spring_introduction.Cat"></bean>
     <bean id="myPet3" class="spring_introduction.Cow"></bean>
 
-<<<<<<< HEAD
-=======
+
     <bean id="myPerson" class = "spring_introduction.Person">
-        <constructor-arg ref="myPet2"/>
+      <property name="pet" ref="myPet"></property>
+        <property name="surname" value="Karimov"></property>
+        <property name="age" value="39"></property>
     </bean>
 
-
->>>>>>> 5a7349a (Dependency Injection with  Constructor)
 </beans>
