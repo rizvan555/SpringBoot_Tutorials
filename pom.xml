@@ -9,7 +9,11 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com</groupId>
+<<<<<<< HEAD
     <artifactId>rizvankarimov</artifactId>
+=======
+    <artifactId>spring_course</artifactId>
+>>>>>>> 5a7349a (Dependency Injection with  Constructor)
     <version>0.0.1-SNAPSHOT</version>
     <name>rizvankarimov</name>
     <description>rizvankarimov</description>
