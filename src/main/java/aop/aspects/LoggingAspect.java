@@ -7,9 +7,10 @@ import org.springframework.stereotype.Component;
 @Component
 @Aspect
 public class LoggingAspect {
-    @Before("execution(public void get*())") // butun classlarin get() methodu ucun isleyir.
+    // @Before("execution(public void get*())") // butun classlarin get() methodu ucun isleyir.
     // @Before("execution(public void getBook())") // butun classlarin getBook() methodu ucun isleyir.
     // @Before("execution(public void aop.UniversityLibrary.getBook())") // yalniz UniversityLibrary class-inin getBook() methodu ucun isleyir
+    @Before("execution(public void get*(..))") // butun classlarin get() methodu ucun isleyir. (..) - 0 ve ya daha cox argument qebul edecek
     public void beforeGetBookAdvice(){
         System.out.println("beforeGetBookAdvice: trying to get a book");
     }

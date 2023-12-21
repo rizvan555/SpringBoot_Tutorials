@@ -7,13 +7,14 @@ public class UniversityLibrary extends AbstractLibrary{
     @Override
     public void getBook(){
         System.out.println("We are getting a book from UniversityLibrary");
+
     }
 
     public String returnBook(){
         System.out.println("We are returning a book to UniversityLibrary");
         return "OK";
     }
-    public void getMagazin(){
-        System.out.println("We are getting a magazin from UniversityLibrary");
+    public void getMagazin(String magazineName){
+        System.out.println("We are getting a magazin from UniversityLibrary " + magazineName);
     }
 }
