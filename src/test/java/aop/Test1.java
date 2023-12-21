@@ -10,7 +10,12 @@ public class Test1 {
     library.getBook();
     library1.getBook();
     library.returnBook();
-    library.getMagazin();
+    library.getMagazine();
+
+
+
+
+//    library.getMagazin("Cosmopolitan");
 
     context.close();
     }
