@@ -11,7 +11,7 @@ public class UniversityLibrary extends AbstractLibrary{
     }
     public String returnBook(){
         System.out.println("We are returning a book to UniversityLibrary");
-        return "OK";
+        return "War and Peace";
     }
 
     public  void getMagazine(){
