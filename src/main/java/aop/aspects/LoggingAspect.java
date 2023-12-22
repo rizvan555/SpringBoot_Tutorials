@@ -1,5 +1,6 @@
 package aop.aspects;
 
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -11,30 +12,43 @@ public class LoggingAspect {
 
 
     // Pointcut - "get" ile baslayanalari birlesdirmek ucundur.
-@Pointcut ("execution(* aop.UniversityLibrary.get*())")
+@Pointcut ("execution(* aop.UniversityLibrary.get*(..))")
 private void allGetMethodsFromUniversityLibrary(){}
     @Before("allGetMethodsFromUniversityLibrary()")
     public void beforeGetLoggingAdvice(){
         System.out.println("beforeGetLoggingAdvice: writing Log #1");
     }
 
-
     // Pointcut - "return" ile baslayanalari birlesdirmek ucundur.
-
-    @Pointcut("execution(* aop.UniversityLibrary.return*())")
+    @Pointcut("execution(* aop.UniversityLibrary.return*(..))")
     private void allReturnMethodsFromUniversityLibrary(){}
     @Before("allReturnMethodsFromUniversityLibrary()")
     public void beforeReturnLoggingAdvice(){
         System.out.println("beforeReturnLoggingAdvice: writing Log #2");
     }
 
+    // Pointcut - "add" ile baslayanalari birlesdirmek ucundur.
+    @Pointcut ("execution(* aop.UniversityLibrary.add*(..))")
+    private void allAddMethodsFromUniversityLibrary(){}
+    @Before("allAddMethodsFromUniversityLibrary()")
+    public void beforeAddLoggingAdvice(){
 
-// Her iki pointcut-i birlesdirmek ucundur:
-    @Pointcut("allGetMethodsFromUniversityLibrary() || allReturnMethodsFromUniversityLibrary()")
-    private void allGetAndReturnMethodsFromUniversityLibrary(){}
-    @Before("allGetAndReturnMethodsFromUniversityLibrary()")
-    public void beforeGetAndReturnLoggingAdvice(){
-        System.out.println("beforeGetAndReturnLoggingAdvice: writing Log #3");
+
+
+
+
+
+        System.out.println("beforeAddLoggingAdvice: writing Log #3");
+    }
+
+
+// Her üc pointcut-i birlesdirmek ucundur:
+    @Pointcut("allGetMethodsFromUniversityLibrary() || allReturnMethodsFromUniversityLibrary() || allAddMethodsFromUniversityLibrary()")
+    private void allGetAndReturnAndAddMethodsFromUniversityLibrary(){}
+    @Before("allGetAndReturnAndAddMethodsFromUniversityLibrary()")
+    public void beforeGetAndReturnAndAddLoggingAdvice(){
+        System.out.println("beforeGetAndReturnAndAddLoggingAdvice: writing Log #4");
+
     }
 
 
